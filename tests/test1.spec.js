@@ -51,70 +51,15 @@ function isOrderedByTimestamp(arr) {
 
 
 
+
 test('Locate subline element', async ({ page }) => {
 
-  // page.on('console', msg => console.log(msg.text()));
-
-
-  // Go to the page containing the element
-  await page.goto('https://news.ycombinator.com/newest');
-
-  // Locate the subline element
-  // const sublineElements = page.locator('span.subline');
-// 
-  /*
-  inside the subline element, there are the following elements:
-  <span class="age" title="2024-09-04T21:33:46.000000Z"><a href="item?id=41451107">18 hours ago</a></span>
-  */
-
-  //iterate elements:
-  // for (const row of await page.locator('span.subline').filter({ has: page.locator('span.age')}).all()) {
-  //   console.log(await row.textContent());
-  //   // console.log('row.innerText():', await  row.innerText());
-  //   // console.log('row.value():', await  row.value());
-  
-  //   // console.log('row.getAttribute(title):', await  row.getAttribute('title'));
-  
     
-  // }
+  let currentIdx = 0;
+ let currentPagination = 1;
   let timeAgoArr = [];
 
-  // for (const row of await page.locator('span.subline').all()) {
-  //   console.log(await row.textContent());
-  
-  //   // Locate all age elements within the subline element
-  //   const ageElement =  row.locator('span.age');
-  
-  //   // Extract and log the title attribute of each age element
-  //   // for (const ageElement of ageElements) {
-  //     const timeAgo = await ageElement.getAttribute('title');
 
-  //   //   console.log('Time Ago:', timeAgo);
-  //   //    // Convert the title attribute to a local date string
-  //   // const dateObject = new Date(timeAgo);
-  //   // const localDateString = dateObject.toLocaleString();
-  //   // console.log('Local Date:', localDateString);
-  //   // }
-  // }
-  // let currentIdx = 0;
-  // let rows =  page.locator('span.subline');
-  // let count = await rows.count();
-  // console.log('count:', count);
-  // for (let i = 0; i < count; ++i){
-  //   // console.log(await rows.nth(i).textContent());
-  //   const timeStampStr = await rows.nth(i).locator('span.age').getAttribute('title');
-  //   timeAgoArr[i] = timeStampStr
-  // //  console.log('timeStampStr:', timeStampStr);
-  // //  const dateObject = new Date(timeStampStr);
-  //   // const localDateString = dateObject.toLocaleString();
-  //   // console.log('Local Date:', localDateString);
-  //   // await page.pause();
-  // }
-
-  // console.log('timeAgoArr:', timeAgoArr);
-  // console.log('timeAgoArr.length:', timeAgoArr.length);
-  // console.log(isOrderedByTimestamp(timeAgoArr));
-    // await page.pause();
 
 // <a href="newest?next=41450875&amp;n=61" class="morelink" rel="next">More</a>
  // Locate the "More" link
@@ -124,17 +69,8 @@ test('Locate subline element', async ({ page }) => {
  await expect(moreLink).toBeVisible();
 
 
-
-
-
- // Optionally, click the "More" link
-//  await moreLink.click();
-//  const elementNum31 =  page.locator('span.rank').nth(0);
-
-//  expect(await elementNum31.innerText()).toBe('31.');
  
- let currentIdx = 0;
- let currentPagination = 1;
+ 
  while (currentIdx < 99) {
   let rows =  page.locator('span.subline');
   let count = await rows.count();
@@ -149,18 +85,12 @@ test('Locate subline element', async ({ page }) => {
     }else {
       break;
     }
-    
-  //  console.log('timeStampStr:', timeStampStr);
-  //  const dateObject = new Date(timeStampStr);
-    // const localDateString = dateObject.toLocaleString();
-    // console.log('Local Date:', localDateString);
+   
     currentIdx++;
     
   }
   await moreLink.click();
-  // console.log('just clicked More');
-  // console.log('currentIdx:', currentIdx);
-  // await page.pause();
+  
   if (currentIdx === 30) {
  expect(await page.locator('span.rank').nth(0).innerText()).toBe('31.');
     
@@ -176,21 +106,11 @@ test('Locate subline element', async ({ page }) => {
   break;
   
  }
-//  await page.pause();
+
  
-  // Ensure the subline element is visible
-  // await expect(sublineElement).toBeVisible();
-
-  // Optionally, you can interact with the subline element or its children
-  // const scoreElement = sublineElement.locator('span.score');
-  // const scoreText = await scoreElement.innerText();
-  // console.log('Score:', scoreText);
-
-  // Pause the page to inspect the UI
-  await page.pause();
  }
- console.log('timeAgoArr:', timeAgoArr);
- console.log('timeAgoArr.length:', timeAgoArr.length);
+//  console.log('timeAgoArr:', timeAgoArr);
+//  console.log('timeAgoArr.length:', timeAgoArr.length);
  expect(isOrderedByTimestamp(timeAgoArr)).toBe(true);
  expect(timeAgoArr.length).toBe(100);
  
