@@ -1,7 +1,22 @@
 # 🐺 QA Wolf Take Home Assignment
 
  
-## Welcome to My Solution to the QA Wolf take home assignment for role! [QA Engineer](https://www.notion.so/qawolf/QA-Wolf-QA-Engineer-Remote-156203a1e476459ea5e6ffca972d0efe) 
+## Welcome to My Solution to the QA Wolf take home assignment for role! [QA Engineer](https://www.notion.so/qawolf/QA-Wolf-QA-Engineer-Remote-156203a1e476459ea5e6ffca972d0efe) :
+
+## Setup
+
+Make sure to install the dependencies:
+
+```bash
+# yarn
+yarn install
+
+# npm
+npm install
+
+# pnpm
+pnpm install 
+```
 
 _I've created 3 slightly different solutions_, which can be run individually or running all 3 using the following:
 
