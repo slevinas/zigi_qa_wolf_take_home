@@ -2,11 +2,11 @@
 
 Welcome to the QA Wolf take home assignment for our [QA Engineer](https://www.notion.so/qawolf/QA-Wolf-QA-Engineer-Remote-156203a1e476459ea5e6ffca972d0efe) role! We appreciate your interest and look forward to seeing what you come up with.
 
-## Instructions
+## My Solution
 
-This assignment has two questions as outlined below. When you are done, send [qa-hiring@qawolf.com](mailto:qa-hiring@qawolf.com) the following:
+i've created 3 slightly differnt solutions, which can be run using the following:
 
-1. A link to a zip file of this folder on Google Drive 
+1. `$ node ./tests/class-playwright-inloop-compate-index.js` 
 
 2. A note indicating your work location (Country/State)
 

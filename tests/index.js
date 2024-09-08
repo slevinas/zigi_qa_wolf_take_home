@@ -1,6 +1,6 @@
-// Description: This file contains the utility functions that are used in the test cases.
+// EDIT THIS FILE TO COMPLETE ASSIGNMENT QUESTION 1
 const { chromium } = require("playwright");
-import { expect, test } from '@playwright/test'
+
 
 
 async function launchBrowser() {
@@ -27,8 +27,8 @@ function isOrderedByTimestamp(arr) {
 }
 
 
-async function goGetTheFirst100Articles(page) {
-  await page.goto("https://news.ycombinator.com/newest");
+async function goGetTheFirst100ArticlesTimeStamp(page) {
+  await gotoHackerNews(page);
   let currentIdx = 0; // Index of the current article
 
   // Array to hold the timestamps of the articles
@@ -37,9 +37,10 @@ async function goGetTheFirst100Articles(page) {
 
   // Locate the "More" link (pagination)
   const moreLink = page.locator('a.morelink', { hasText: 'More' });
-  await expect(moreLink).toBeVisible();
+  // await expect(moreLink).toBeVisible();
   while (currentIdx < 100) {
     const rows = page.locator('span.subline');
+    // await rows.waitFor();
     let count = await rows.count();
 
     for (let i = 0; i < count && currentIdx < 100; ++i) {
@@ -49,7 +50,7 @@ async function goGetTheFirst100Articles(page) {
     }
 
     if (currentIdx >= 99) break; // Break if we have collected 100 timestamps already otherwise click on the "More" link
-
+    await moreLink.waitFor();
     await moreLink.click();
   }
 
@@ -57,4 +58,4 @@ async function goGetTheFirst100Articles(page) {
 
 }
 
-module.exports = { launchBrowser, gotoHackerNews, goGetTheFirst100Articles, isOrderedByTimestamp };
+module.exports = { launchBrowser, gotoHackerNews, goGetTheFirst100ArticlesTimeStamp, isOrderedByTimestamp };
