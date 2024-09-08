@@ -4,7 +4,7 @@ Welcome to the QA Wolf take home assignment for our [QA Engineer](https://www.no
 
 ## My Solution
 
-i've created 3 slightly different solutions, which can be run using the following:
+_I've created 3 slightly different solutions_, which can be run using the following:
 
 
 1. `$ node ./tests/class-playwright-inloop-compare-index.js`.
