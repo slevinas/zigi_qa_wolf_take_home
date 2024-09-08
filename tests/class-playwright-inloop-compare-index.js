@@ -50,10 +50,12 @@ async function sortHackerNewsArticles() {
             }
         }
         expect(currentIdx).toBe(100);
+        console.log(`${currentIdx} Articles are sorted correctly!`);
 
     } catch (error) {
         console.error("An error occurred:", error);
     } finally {
+
         // Close the browser
         await browser.close();
     }

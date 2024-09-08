@@ -14,19 +14,22 @@ _I've created 3 slightly different solutions_, which can be run using the follow
 3. `$ npx playwright test tests/hackerNewsTest.spec.js --debug `.
 
 
-### Solution 1
+### Solution 1 
+#### file: `class-playwright-inloop-compare-index.js`
 
 In this implementation i'm iterating over the tableRows and selecting 
 based on the row's id which is mapped to span.age(which holds the dateTimeString) by it's child anchor-tag that holds a reference to that id.
 
 While in the loop i'm comparing that extracted dateTime-string transformed to milliseconds with the next element in the series, using playwright's expect(). 
+
 If the comparison fails the test will stop at the point of failure without any need to get the whole 100 records. 
 
 ### Solution 2.
+#### file: `class-playwright-collecting-data-and-compare-index.js`.
 
-2. Edit the `index.js` file in this project to go to [Hacker News/newest](https://news.ycombinator.com/newest) and validate that EXACTLY the first 100 articles are sorted from newest to oldest. You can run your script with the `node index.js` command.
 
-Note that you are welcome to update Playwright or install other packages as you see fit, however you must utilize Playwright in this assignment.
+In this implementation i'm Collecting EXACTLY the first 100 articles
+and storing them into an array and then pass that array to a utility function to validate that it is sorted from newest to oldest.
 
 ### Question 2
 

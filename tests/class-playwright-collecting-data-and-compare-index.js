@@ -61,7 +61,7 @@ async function sortHackerNewsArticles() {
         // // Check if the timestamps are sorted from newest to oldest
         const isOrdered = isOrderedByTimestamp(timeAgoArr);
         expect(isOrdered).toBe(true);
-        console.log(`Is the array sorted in descending order? ${isOrdered ? 'Yes' : 'No'}`);
+        console.log(`An array of ${timeAgoArr.length}  is sorted in descending order? ${isOrdered ? 'Yes' : 'No'}`);
 
     } catch (error) {
         console.error("An error occurred:", error);
