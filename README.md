@@ -62,24 +62,30 @@ If the comparison fails the test will stop at the point of failure without any n
 #### file: `class-playwright-collecting-data-and-compare-index.js`.
 
 
-In this implementation i'm Collecting EXACTLY the first 100 articles
-and storing them into an array and then pass that array to a utility function to validate that it is sorted from newest to oldest.
+In this implementation i'm Collecting the first 100 articles
+and storing them into an array and then passing that array to a utility function to validate that it is sorted from newest to oldest.
 Also i've chosen to use a different way of collecting the array . without relating it to the row above.
 
 
-### Solution 3 using Playwright Test as the main file and index as utility.
+### Solution 3 using Playwright Test as the main file and index.js as utility.
 #### file: `index.js`. And `hackerNewsTest.spec.js`
 
 
-In this implementation i'm Collecting EXACTLY the first 100 articles
-and storing them into an array and then pass that array to a utility function to validate that it is sorted from newest to oldest.
-Also i've chosen to use a different way of collecting the array . without relating it to the row above.
+In this implementation i'm using an imported Utility function  from the index.js file
+
+  _"goGetTheFirst100ArticlesTimeStamp()"_
+
+
+which Returns an array of the first 100 dateTimeSrtings and then passing this array to 
+another utility function to return a true/false upon check and using that with playwright's expect within it's test() function. 
 
 ### Question 2
 
 Why do you want to work at QA Wolf? Please record a short, ~2 min video that includes:
 
-1. Your answer 
+1. Your answer -
+   I believe i have a place in a company that values dedicated hard working, thinking caring people. 
+   and provides a path to advance my carrier as well!.
 
 2. A walk-through demonstration of your code, showing a successful execution
 
