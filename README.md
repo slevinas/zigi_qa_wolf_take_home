@@ -6,20 +6,23 @@ Welcome to the QA Wolf take home assignment for our [QA Engineer](https://www.no
 
 i've created 3 slightly different solutions, which can be run using the following:
 
+
 1. `$ node ./tests/class-playwright-inloop-compare-index.js`.
 
-
-2.`$ node ./tests/class-playwright-collecting-data-and-compare-index.js`.
-
+2. `$ node ./tests/class-playwright-collecting-data-and-compare-index.js`.
 
 3. `$ npx playwright test tests/hackerNewsTest.spec.js --debug `.
 
 
-### Question 1
+### Solution 1
 
-In this assignment, you will create a script on [Hacker News](https://news.ycombinator.com/) using JavaScript and Microsoft's [Playwright](https://playwright.dev/) framework. 
+In this implementation i'm iterating over the tableRows and selecting 
+based on the row's id which is mapped to span.age(which holds the dateTimeString) by it's child anchor-tag that holds a reference to that id.
 
-1. Install node modules by running `npm i`.
+While in the loop i'm comparing that extracted dateTime-string transformed to milliseconds with the next element in the series, using playwright's expect(). 
+If the comparison fails the test will stop at the point of failure without any need to get the whole 100 records. 
+
+### Solution 2.
 
 2. Edit the `index.js` file in this project to go to [Hacker News/newest](https://news.ycombinator.com/newest) and validate that EXACTLY the first 100 articles are sorted from newest to oldest. You can run your script with the `node index.js` command.
 
