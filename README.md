@@ -4,13 +4,16 @@ Welcome to the QA Wolf take home assignment for our [QA Engineer](https://www.no
 
 ## My Solution
 
-i've created 3 slightly differnt solutions, which can be run using the following:
+i've created 3 slightly different solutions, which can be run using the following:
 
-1. `$ node ./tests/class-playwright-inloop-compate-index.js` 
+1. `$ node ./tests/class-playwright-inloop-compare-index.js`.
 
-2. A note indicating your work location (Country/State)
 
-3. A note of how you found this job post (LinkedIn, Handshake, Wellfound, referral, etc.)
+2.`$ node ./tests/class-playwright-collecting-data-and-compare-index.js`.
+
+
+3. `$ npx playwright test tests/hackerNewsTest.spec.js --debug `.
+
 
 ### Question 1
 
