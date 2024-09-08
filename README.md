@@ -1,8 +1,7 @@
 # 🐺 QA Wolf Take Home Assignment
 
-Welcome to the QA Wolf take home assignment for our [QA Engineer](https://www.notion.so/qawolf/QA-Wolf-QA-Engineer-Remote-156203a1e476459ea5e6ffca972d0efe) role! We appreciate your interest and look forward to seeing what you come up with.
-
-## My Solution
+ 
+## Welcome to My Solution to the QA Wolf take home assignment for role! [QA Engineer](https://www.notion.so/qawolf/QA-Wolf-QA-Engineer-Remote-156203a1e476459ea5e6ffca972d0efe) 
 
 _I've created 3 slightly different solutions_, which can be run individually or running all 3 using the following:
 
@@ -105,6 +104,4 @@ We evaluate candidates based on three criteria:
 
 This means whether we hire you is based on how you do during our interview process, not on your previous experience (or lack thereof). Note that you will also need to pass a background check to work here as our customers require this.
 
-### How can I help my application stand out?
 
-We've found that our best hires have been the most enthusiastic throughout our process. If you are very excited about working here, please feel free to go above and beyond on this assignment.
