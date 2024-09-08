@@ -9,8 +9,7 @@ test('validate Hacker News articles are sorted from newest to oldest', async () 
 
   expect(isOrderedByTimestamp(timeAgoArr)).toBe(true);
   expect(timeAgoArr.length).toBe(100);
-  // Just  to see the  output
-  // instead of seeing the test pass or fail in the terminal
+  // Just to see the output instead of seeing the test pass or fail in the terminal
   console.log('timeAgoArr.length:', timeAgoArr.length);
   console.log(isOrderedByTimestamp(timeAgoArr));
 

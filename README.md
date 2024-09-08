@@ -4,18 +4,52 @@ Welcome to the QA Wolf take home assignment for our [QA Engineer](https://www.no
 
 ## My Solution
 
-_I've created 3 slightly different solutions_, which can be run using the following:
+_I've created 3 slightly different solutions_, which can be run individually or running all 3 using the following:
 
 
 1. `$ node ./tests/class-playwright-inloop-compare-index.js`.
 
 2. `$ node ./tests/class-playwright-collecting-data-and-compare-index.js`.
 
-3. `$ npx playwright test tests/hackerNewsTest.spec.js --debug `.
+3. `$ npx playwright test tests/hackerNewsTest.spec.js `.
+
+4. Running All 3 Tests Using shell. `./run-tests.sh `. 
+ - Expected Output:
+ ```
+100 Articles are sorted correctly!
+An array of 100  is sorted in descending order? Yes
+
+Running 1 test using 1 worker
+[chromium] › hackerNewsTest.spec.js:6:5 › validate Hacker News articles are sorted from newest to oldest
+timeAgoArr.length: 100
+true
+  1 passed (2.2s)
+
+ ```
+
+5. Running All 3 Tests Using Node.js. `node run-test.js`.
+ - Expected Output:
+ ```
+node run-tests.js
+Output from command 1: 100 Articles are sorted correctly!
+
+Output from command 3: 
+Running 1 test using 1 worker
+[chromium] › hackerNewsTest.spec.js:6:5 › validate Hacker News articles are sorted from newest to oldest
+timeAgoArr.length: 100
+true
+  1 passed (2.5s)
+
+Output from command 2: An array of 100  is sorted in descending order? Yes
+
+ ```
 
 
 ### Solution 1 
 #### file: `class-playwright-inloop-compare-index.js`
+#### Note! 
+##### highest degree of validation in terms of relation between article's id and the dateTimeString being compared.
+
 
 In this implementation i'm iterating over the tableRows and selecting 
 based on the row's id which is mapped to span.age(which holds the dateTimeString) by it's child anchor-tag that holds a reference to that id.
@@ -30,6 +64,16 @@ If the comparison fails the test will stop at the point of failure without any n
 
 In this implementation i'm Collecting EXACTLY the first 100 articles
 and storing them into an array and then pass that array to a utility function to validate that it is sorted from newest to oldest.
+Also i've chosen to use a different way of collecting the array . without relating it to the row above.
+
+
+### Solution 3 using Playwright Test as the main file and index as utility.
+#### file: `index.js`. And `hackerNewsTest.spec.js`
+
+
+In this implementation i'm Collecting EXACTLY the first 100 articles
+and storing them into an array and then pass that array to a utility function to validate that it is sorted from newest to oldest.
+Also i've chosen to use a different way of collecting the array . without relating it to the row above.
 
 ### Question 2
 
@@ -43,13 +87,7 @@ Post the link in `why_qa_wolf.txt` (Please use [Loom](https://www.loom.com) to r
 
 ## Frequently Asked Questions
 
-### What is your hiring process? When will I hear about next steps?
 
-This take home assignment is the first step in our hiring process, followed by a final round interview if it goes well. **We review every take home assignment submission and promise to get back to you either way within one week (usually sooner).** The only caveat is if we are out of the office, in which case we will get back to you when we return. If it has been more than one week and you have not heard from us, please do follow up.
-
-The final round interview is a 2-hour technical work session that reflects what it is like to work here. We provide a $150 stipend for your time for the final round interview regardless of how it goes. After that, there may be a short chat with our director about your experience and the role.
-
-Our hiring process is rolling where we review candidates until we have filled our openings. If there are no openings left, we will keep your contact information on file and reach out when we are hiring again.
 
 ### How do you decide who to hire?
 
