@@ -98,30 +98,6 @@ In this implementation i'm using an imported Utility function  from the index.js
 which Returns an array of the first 100 dateTimeSrtings and then passing this array to 
 another utility function to return a true/false upon check and using that with playwright's expect within it's test() function. 
 
-### Question 2
-
-Why do you want to work at QA Wolf? Please record a short, ~2 min video that includes:
-
-1. Your answer -
-   I believe i have a place in a company that values dedicated hard working, thinking caring people. 
-   and provides a path to advance my carrier as well!.
-
-2. A walk-through demonstration of your code, showing a successful execution
-
-Post the link in `why_qa_wolf.txt` (Please use [Loom](https://www.loom.com) to record your response). The answer and walkthrough should be combined into *one* video.
-
-## Frequently Asked Questions
-
-
-
-### How do you decide who to hire?
-
-We evaluate candidates based on three criteria:
-
-- Technical ability (as demonstrated in the take home and final round)
-- Customer service orientation (as this role is customer facing)
-- Alignment with our values (captured [here](https://www.notion.so/qawolf/QA-Wolf-QA-Engineer-Remote-156203a1e476459ea5e6ffca972d0efe))
-
-This means whether we hire you is based on how you do during our interview process, not on your previous experience (or lack thereof). Note that you will also need to pass a background check to work here as our customers require this.
-
+Thank you :
+Sagi Levinas (Zigi)
 
