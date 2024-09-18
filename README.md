@@ -20,6 +20,7 @@ pnpm install
 
 _I've created 3 slightly different solutions_, which can be run individually or running all 3 using the following:
 
+#### Running individual tests:
 
 1. `$ node ./tests/class-playwright-inloop-compare-index.js`.
 
