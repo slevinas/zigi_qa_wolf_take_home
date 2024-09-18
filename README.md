@@ -28,7 +28,9 @@ _I've created 3 slightly different solutions_, which can be run individually or 
 
 3. `$ npx playwright test tests/hackerNewsTest.spec.js `.
 
-4. Running All 3 Tests Using shell. `./run-tests.sh `. 
+#### Running All 3 Tests Using shell. 
+4. `./run-tests.sh `. 
+
  - Expected Output:
  ```
 100 Articles are sorted correctly!
@@ -42,7 +44,9 @@ true
 
  ```
 
-5. Running All 3 Tests Using Node.js. `node run-test.js`.
+#### Running All 3 Tests Using Node.js.
+5.  `node run-test.js`.
+
  - Expected Output:
  ```
 node run-tests.js
