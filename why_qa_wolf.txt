@@ -2,9 +2,8 @@ Hi there,
 
 I just recorded a Loom explaining my interest in working at QA, as well as a code challenge I tackled. In the video, I walk through the challenge of verifying the sorting of articles on a webpage. I shared my approach and solutions, including using Playwright for testing. You can check it out here: 
 
-\
-https://loom.com/share/1e0d855fac1e41a0bafdd22748b48f31?src=composer
+https://www.loom.com/share/8918fa149a5f4803b2da9a88607dbe01?sid=50c03f3e-373b-4e5a-a026-3ebf0c1a6c80
 
 Thanks!
 
-Sagi Levinas
+Sagi Levinas. 
